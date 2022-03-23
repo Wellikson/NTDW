@@ -1,0 +1,74 @@
+mixin Walk{void andar()=>print('Estou Andando');}
+mixin Swim{void nadar()=>print('Estou Nadando');}
+mixin Fly{void voar()=>print('Estou Voando');}
+
+abstract class Animal with Walk,Swim,Fly{}
+class Mamifero with Walk{}
+class Passaro with Fly{}
+class Peixe with Swim{}
+
+//Mamiferos
+class Golfinho with Swim{
+  void goldinho(){
+    print('${this.runtimeType}');
+    nadar();
+  }
+}
+class Morcego extends Mamifero with Fly{
+  void morcego(){
+    print('${this.runtimeType}');
+    andar();
+    voar();
+  }
+}
+class Gato extends Mamifero{
+  void gato(){
+    print('${this.runtimeType}');
+    andar();
+  }
+}
+
+//Passaros
+class Pombo extends Passaro{
+  void pombo(){
+    print('${this.runtimeType}');
+    voar();
+  }
+}
+class Pato extends Animal{
+  void pato(){
+    print('${this.runtimeType}');
+    andar();
+    nadar();
+    voar();
+  }
+}
+
+//Peixes
+class Tubarao extends Peixe{
+  void tubarao(){
+    print('${this.runtimeType}');
+    nadar();
+  }
+}
+class PeixeVoador extends Peixe with Fly{
+  void peixeVoador(){
+    print('${this.runtimeType}');
+    nadar();
+    voar();
+  }
+}
+void main(){
+ //Mamiferos
+  Golfinho().goldinho();
+  Morcego().morcego();
+  Gato().gato();  
+ //Passaros
+  Pombo().pombo();
+  Pato().pato();  
+ //Peixes
+  Tubarao().tubarao();
+  PeixeVoador().peixeVoador();
+}
+
+

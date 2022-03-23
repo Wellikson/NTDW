@@ -1,0 +1,74 @@
+class Pessoa {
+  String nome;
+  String cpf;
+
+  Pessoa() {}
+  Pessoa.construtor(String nome, String cpf) {
+    this.nome = nome;
+    this.cpf = cpf;
+  }
+  set setNome(String nome) {
+    this.nome = nome;
+  }
+
+  get getNome {
+    return this.nome;
+  }
+
+  set setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+
+  get getCpf {
+    return this.cpf;
+  }
+
+  dados() {
+    print("Nome : " + getNome + "\nCpf : " + getCpf);
+  }
+}
+
+class Estudante extends Pessoa {
+  String matricula,situacao;
+
+  Estudante() {}
+
+  Estudante.construtor(
+      String matricula, String situacao, String cpf, String nome) {
+    this.matricula = matricula;
+    this.situacao = situacao;
+    this.cpf = cpf;
+    this.nome = nome;
+  }
+  set setMatricula(String matricula) {
+    this.matricula = matricula;
+  }
+
+  get getMatricula {
+    return this.matricula;
+  }
+
+  set setSituacao(String situacao) {
+    this.situacao = situacao;
+  }
+
+  get getSituacao {
+    return this.situacao;
+  }
+
+  dadosEstudante() {
+    dados();
+    print("Matricula : "+matricula +
+        "\nSituação : "+situacao);
+  }
+}
+
+void main() {
+  String nome = "Maria";
+  String cpf = "056-935-621-07";
+  String matricula = "2028423323-0";
+  String situacao = "Reprovado";
+//   Pessoa p2 = Pessoa.construtor(nome, cpf);
+  Estudante est = Estudante.construtor(matricula,situacao,cpf,nome);
+  est.dadosEstudante();
+}

@@ -1,0 +1,4 @@
+#Thu Oct 01 08:21:33 BRT 2020
+base.0=/home/wellikson/Desktop/Novas Tecnologias em Desenvolvimento para web/aula 5/cartao_digital/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

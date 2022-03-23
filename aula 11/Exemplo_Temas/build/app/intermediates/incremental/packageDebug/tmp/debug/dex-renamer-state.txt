@@ -1,0 +1,4 @@
+#Mon Nov 02 12:05:02 BRT 2020
+base.0=/home/wellikson/Desktop/Novas Tecnologias em Desenvolvimento para web/Nova Pasta/Exemplo_Temas/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
